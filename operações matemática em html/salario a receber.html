@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<h1>Devroots</h1>
+		<p>Atividade indivídual 06 </p>
+		<p id="demo"></p>
+		
+		<h1 id="Cleber"></h1>
+		
+		<script>
+		
+		NomeFun = prompt ('informe seu nome');
+		
+		Salario = prompt ('Informe valor do salário mensal');
+		
+		Dias = prompt('informe os dias trabalhados');
+		
+		Salario = Salario/22
+		valor = Salario*Dias
+
+		Valorformatado = valor.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'});
+		
+		document.write("Olá " + NomeFun + ",  você teve " + Dias + " dias trabalhados, o valor que você tem a receber é =  " + Valorformatado);
+		
+		
+		
+		</script>
+		</body>
+		
+		
+</html>		

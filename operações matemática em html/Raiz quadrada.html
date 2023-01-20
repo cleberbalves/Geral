@@ -1,0 +1,24 @@
+<!DOCTYPEhtml>
+<html>
+    <head>
+       
+    </head>
+    <body>
+         <title>Cailculo da Raiz Quadrada</title>
+        <script type="text/javascript">
+        function calcular () {
+            document.getElementById("Formulario");
+            var raiz = formulario.valor.value;
+            raiz = (Math.sqrt(raiz));
+            var resultado = raiz;
+            formulario.resultado.value = resultado;
+        } 
+
+        </script>
+        <form id="formulario">
+            VALOR: <input type="text" name="valor"/>
+            RESULTADO: <input type="text" name="resultado"/>
+            <input type="button" value="Calcular Raiz" onclick="calcular ();"/>
+        </form>
+    </body>
+</html>
