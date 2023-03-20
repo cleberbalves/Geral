@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<html lang="br">
+<body>
+ <h1>Atividade D02</h1>
+ <p>01</p>
+ <p id="individual"></p>
+
+ <script>
+let numero = parseInt(prompt("Digite um número inteiro:")); 
+let éPrimo = true; 
+
+
+if (numero < 2) {
+  
+  éPrimo = false;
+} else {
+  
+  for (let i = 2; i <= Math.sqrt(numero); i++) {
+    if (numero % i === 0) {
+      
+      éPrimo = false;
+      break;
+    }
+  }
+}
+
+
+if (éPrimo) {
+  document.getElementById("individual").innerHTML =numero + " é um número primo.";
+} else {
+  document.getElementById("individual").innerHTML = numero + " não é um número primo.";
+}
+
+ </script>
+ 
+ 
+ 
+  </body>
+</html>
