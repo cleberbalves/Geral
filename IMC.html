@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-image: url('https://www.saudebemestar.pt/media/89347/obesidade.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+</style>
+</head>
+<body>
+<h1>Atividade D03</h1>
+
+ <p id="individual"></p>
+
+ <script>
+    function pulaLinha() {
+
+        document.write("<br><br>");
+
+    }
+
+    function mostrar(texto) {
+
+        document.write(texto);
+        pulaLinha();
+
+    }
+
+    function calcImc(peso, altura){
+
+        return imc = (Math.round(10*peso/(altura**2)))/10
+
+    }
+
+   
+
+    function pesoIdeal(altura){
+
+        mostrar("Busque manter seu peso entre "+
+        ((Math.round(18.5*(altura**2)*10))/10)+" e "+
+        ((Math.round(24.9*(altura**2)*10))/10)+" kg.")
+
+    }
+
+    alert("Seja bem vindo(a) a calculadora de IMC, clique em OK para continuar");
+    var nome = prompt("Informe seu nome. ");
+    var peso=parseFloat(prompt(nome + " Informe seu peso em Kg"));
+    var altura=prompt(nome + "  Informe sua altura em centimetros")/100;
+    var imc=calcImc(peso, altura);
+
+    mostrar(peso+" kg e "+altura+"m.");
+    document.write("<hr>" +nome+ " Seu IMC = "+imc+" Classificação: ");
+
+    if (imc<18.5){
+
+        mostrar(" peso baixo");
+        mostrar("Cuidado! Você está "+(((Math.round(18.5*(altura**2)*10))/10)-peso)+"kg a baixo do peso ideal!!!");
+        pesoIdeal(altura);
+
+    } else if (imc >= 18.5 && imc <= 24.9){ 
+
+        mostrar(" peso normal");
+        mostrar("Parabéns! Você está dentro do peso ideal para sua altua!");
+        pesoIdeal(altura);
+
+    } else if (imc >= 25 && imc < 30){
+
+        mostrar(" sobrepeso");
+        mostrar("Cuidado! Você está "+((Math.round((peso-(24.9*(altura**2)))*10))/10)+"kg a cima do peso ideal!!!");
+        pesoIdeal(altura);
+
+    } else if(imc >= 30 && imc < 35){
+
+        mostrar(" obesidade grau 1");
+        mostrar("Cuidado! Você está "+((Math.round((peso-(24.9*(altura**2)))*10))/10)+"kg a cima do peso ideal!!!");//
+        pesoIdeal(altura);
+
+    }else if(imc >= 35 && imc < 40){
+
+        mostrar(" obesidade grau 2");
+
+    } else {
+
+        mostrar(" obesidade grau 3");
+        mostrar("Cuidado! Você está "+((Math.round((peso-(24.9*(altura**2)))*10))/10)+"kg a cima do peso ideal!!!");
+        pesoIdeal(altura);
+
+    } 
+
+   
+ </script>
+
+
+
+</body>
+</html>
